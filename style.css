@@ -1,9 +1,23 @@
 body{
-	font-family: 'Julius Sans One', sans-serif;
 	background-color: #2B3A3D;
 	color: #D9F1F0;
 }
 
-.head{
+.hello{
 	font-size: 2em;
+	font-family: 'Petit Formal Script', cursive;
+}
+.body-copy{
+	font-family:'Lato', sans-serif;
+	font-weight:light;
+	color:#F3FBDF;
+}
+a{
+	color:#CEC0C6;
+}
+.center{
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
