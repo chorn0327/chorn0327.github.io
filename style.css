@@ -1,19 +1,19 @@
 body{
-	background-color: #2B3A3D;
-	color: #D9F1F0;
+	background-color: #283D3B;
+	color: #FFFCF6;
 }
 
 .hello{
 	font-size: 2em;
 	font-family: 'Petit Formal Script', cursive;
+	color: #00976C;
 }
 .body-copy{
 	font-family:'Lato', sans-serif;
 	font-weight:light;
-	color:#F3FBDF;
 }
 a{
-	color:#CEC0C6;
+	color:#981A40;
 }
 .center{
 	position:fixed;
