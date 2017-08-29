@@ -10,14 +10,26 @@ body{
 }
 .body-copy{
 	font-family:'Lato', sans-serif;
-	font-weight:light;
+	font-weight:300;
 }
 a{
 	color:#CC2255;
+}
+a:hover{
+    color:#E79AB1;
+    text-decoration:underline
+}
+.navbar{
+    border-radius:0;
+    	font-family:'Lato', sans-serif;
+	font-weight:400;
 }
 .center{
 	position:fixed;
 	top:50%;
 	left:50%;
 	transform: translate(-50%, -50%);
+}
+.container{
+    max-width:100%;
 }
