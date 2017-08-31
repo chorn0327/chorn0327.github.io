@@ -15,7 +15,7 @@ body{
 a{
 	color:#CC2255;
 }
-a:hover{
+a:hover a:focus a:active{
     color:#E79AB1;
     text-decoration:underline
 }
