@@ -1,16 +1,52 @@
 body{
-	background-color: #283D3B;
+	background-color: #122638;
 	color: #FFFCF6;
 }
-
+.about-pic{
+	margin-top:35px;
+	width:300px;
+	height:300px;
+}
 .hello{
-	font-size: 2em;
-	font-family: 'Petit Formal Script', cursive;
+	font-size: 40pt;
+	font-family:'Lato', sans-serif;
+	font-weight:300;
 	color: #00976C;
+}
+.social-icon{
+	width:50px;
+	margin:10px;
+}
+.name{
+	font-size: 45pt;
+	font-family: 'Petit Formal Script', cursive;
+	color: #13293D;
+	background-color: #F4FCFF;
+	text-align: center;
+}
+.social-txt{
+	font-size: 20pt;
+	font-family: 'Petit Formal Script', cursive;
+	color: #F4FCFF;
+}
+.contact{
+	font-size: 35pt;
+	font-family: 'Petit Formal Script', cursive;
+	color: #F4FCFF;
+	
+	text-align: center;
 }
 .body-copy{
 	font-family:'Lato', sans-serif;
 	font-weight:300;
+	font-size: 20pt;
+}
+#footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #F4FCFF;
+    color: #13293D;
+    margin-top: 50px;
 }
 a{
 	color:#CC2255;
@@ -19,10 +55,34 @@ a:hover{
     color:#E79AB1;
     text-decoration:underline
 }
+.navbar-default .navbar-nav>li>a:hover {
+    color: #333;
+    background-color: #F4FCFF;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #F4FCFF;
+}
+.navbar-default{
+	background-color: #283C4E;
+	border-color: #283C4E;
+}
 .navbar{
     border-radius:0;
-    	font-family:'Lato', sans-serif;
+    font-family:'Lato', sans-serif;
 	font-weight:400;
+	opacity: 50%;
+
+}
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
 }
 .center{
 	position:fixed;
