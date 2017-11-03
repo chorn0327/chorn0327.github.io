@@ -9,7 +9,7 @@ body{
 	border-radius: 50%;
 }
 .hello{
-	font-size: 40pt;
+	font-size: 35pt;
 	font-family:'Lato', sans-serif;
 	font-weight:300;
 	color: #00976C;
@@ -40,7 +40,8 @@ body{
 .body-copy{
 	font-family:'Lato', sans-serif;
 	font-weight:300;
-	font-size: 20pt;
+	font-size: 18pt;
+	padding-left: 10px;
 }
 #footer {
     text-align: center;
