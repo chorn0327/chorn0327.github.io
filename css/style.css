@@ -1,25 +1,99 @@
 body{
-	background-color: #122638;
+	background-color: #081A31;
 	color: #FFFCF6;
 }
 .about-pic{
 	margin-top:35px;
-	width:300px;
-	height:300px;
-	border-radius: 50%;
+	width: inherit;
+	object-fit: cover;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+	background-image: url("../aboutmountain.jpg");
 }
+
+
+.hero {
+  align-items: center;
+  height: auto;
+  min-width: 0;
+}
+
+img {
+  width: 450px;
+  max-width: 100%;
+}
+.about-parallax{
+	/* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    background-image: url("../aboutmountain.jpg");
+    /* Sizing */
+    width:300px;
+	height:300px;
+
+
+	background-size: 300px 100px;
+	
+}
+.parallax { 
+    /* The image used */
+    background-image: url("../aboutmountain1.jpg");
+
+    /* Set a specific height */
+    height: 500px; 
+	font-size: 35pt;
+	font-family:'Playfair Display', sans-serif;
+	color: #F4FCFF;
+	text-align: center;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    /*background-position: 0px -150px; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover; 
+  	position: relative; /* Needed to position the cutout text in the middle of the image */
+  	/*height: 300px;  Some height */
+}
+
+
+.outline-text {
+  background-color: white;
+  color: black;
+  font-size: 2em; /* Responsive font size */
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+  width: 50%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
 .hello{
 	font-size: 35pt;
 	font-family:'Lato', sans-serif;
 	font-weight:300;
 	color: #00976C;
 }
+.parra1{
+	font-size: 35pt;
+	font-family:'Lato', sans-serif;
+	font-weight:300;
+}
 .social-icon{
 	width:50px;
 	margin:10px;
 }
 .name{
-	font-size: 45pt;
+	font-size: 35pt;
 	font-family: 'Petit Formal Script', cursive;
 	color: #13293D;
 	background-color: #F4FCFF;
@@ -29,6 +103,39 @@ body{
 	font-size: 20pt;
 	font-family: 'Petit Formal Script', cursive;
 	color: #F4FCFF;
+}
+.design .ptitle{
+	color: #081A31;
+	background: #F45866;
+    border-radius: inherit;
+    font-size: 20pt;
+    padding: 2px;
+}
+.cs .ptitle{
+	color: #081A31;
+	background: #00976C;
+    border-radius: inherit;
+    font-size: 20pt;
+    padding: 2px;
+}
+.intersection .ptitle{
+	color: #081A31;
+	background: #4056F4;
+    border-radius: inherit;
+    font-size: 20pt;
+    padding: 2px;
+}
+.box{
+	margin: 2px;
+	background-color: rgba(244, 252, 255, 0.9);
+	border-radius: 4px;
+	font-family:'Lato', sans-serif;
+	position:relative;
+}
+.pdesc{
+	color:#081A31;
+	padding: 2px;
+	margin-bottom: 15px;
 }
 .contact{
 	font-size: 35pt;
@@ -42,15 +149,17 @@ body{
 	font-weight:300;
 	font-size: 18pt;
 	padding-left: 10px;
+	margin: 1em 0;
 }
 #footer {
     text-align: center;
     padding: 15px;
     background-color: #F4FCFF;
     color: #13293D;
-
     margin-top: 5em;
 }
+
+
 a{
 	color:#CC2255;
 }
@@ -65,6 +174,9 @@ a:hover, a:focus, a:active{
 .navbar-default .navbar-nav>li>a {
     color: #F4FCFF;
 }
+#bootstrap-override .navbar-brand, #bootstrap-override .navbar-light .navbar-nav .active>.nav-link{
+	color: #081A31;
+}
 .navbar-default{
 	background-color: #283C4E;
 	border-color: #283C4E;
@@ -74,13 +186,14 @@ a:hover, a:focus, a:active{
     font-family:'Lato', sans-serif;
 	font-weight:400;
 	opacity: 50%;
+	background-color: #F4FCFF;
 
 }
 .navbar-nav {
     float:none;
-    margin:0 auto;
+    margin:0 0 auto ;
     display: block;
-    text-align: center;
+    text-align: right;
 }
 
 .navbar-nav > li {

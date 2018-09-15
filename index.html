@@ -1,3 +1,6 @@
+<!doctype html>
+<html>
+
 <head>
 	<title>C Horn</title>
 	<!--Google Anayltics Tracking-->
@@ -11,18 +14,61 @@
   ga('send', 'pageview');
 
 </script>
-	
+	<!-- 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+	<!-- Bootstrap Styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Bootstrap Javascript -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+
+	<!-- Site Styling -->
 	<link rel ="stylesheet" type="text/css" href="css/style.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Petit+Formal+Script" rel="stylesheet">
+
+	<!-- Font Family -->
+	<link href="https://fonts.googleapis.com/css?family=Lato|Petit+Formal+Script|Playfair+Display" rel="stylesheet">
+	
+	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Set viewport for Responsive Design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 
 </head>
-<body>
+<body id="bootstrap-override">
     
-<div class="name">Caitlyn Horn<br/></div>
+  <!--   <div class="block -berry edge--bottom">
+  <h1>Bottom Angled Edge</h1>
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand name" href="#">Caitlyn Horn</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="portfolio.html">Portfolio</a>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link disabled" href="CaitlynHornResume.pdf" target="_blank">Resum&eacute;</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- <div class="name">Caitlyn Horn<br/></div> -->
 <!--<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -45,7 +91,7 @@
     </div>
   </div>
 </nav> -->
-    
+
     
   <!-- <div class="container">
 	    <div class="row">
@@ -61,49 +107,61 @@
 		    <div class="col-md-1"></div>
 	    </div>
     </div>-->
+
+    <div class="parallax">
+  <div class="outline-text">hello, world</div>
+</div>
+   <!--  <div class = "parallax">computer science + design
+    	<br/><span class = "parra1">curiosity at the intersection</span> </div> -->
+    	
     <div class="container">
 	    <div class="row">
 		    <div class="col-md-1"></div>
-		    		    <div class="col-md-4">
-		    	
-				<img src="aboutpicture.jpg" alt="Photo of Caitlyn Horn"  class="about-pic">
-		    </div>
+		    <div class="col-md-4 hero">
+		    	<!-- <img src="aboutcap.jpg"/> -->
+		    	<!-- <div class = "about-parallax"></div> -->
+				<img src="aboutmountain2.jpg" alt="Photo of Caitlyn Horn"  class="about-pic"></img>
+			</div>
 		    <div class="col-md-6">
 		<!--	<h1 class = "center">-->
-		       <h1 class="text-left">
-				<span class="hello">About<br/></span>
+
 				<!---->
-				<div class="body-copy">
-				Hello! My name is Caitlyn Horn. 
-				<br/>I'm a fourth year undergraduate student studying Computer and Information Science with a minor in Design at The Ohio State University. I am interested in software engineering and full stack web development. 
-				<br/>Forgive me for the in progress website, I'm so glad you're here.
+				<div class="body-copy text-left">
+				Hi! My name is Caitlyn Horn. I'm studying Computer and Information Science and minoring in Design at The Ohio State University. I graduate in December of 2018.
+				<br/>I'm interested in all sorts of things. I love computer science and I love design and I love to think about how the two can come together. I want to live and work in a community that values an inclusive tech culture, one that realizes that we're all better off working together.
+				<br/>On that note, I'm glad you've found my website. Take a look around and if you find anything that piques your interest be sure to send me an electronic mail.
 				<!--<br/>Please take a look around my website, I'm glad you're here.</div>-->
-			</h1>
-			<h1 class="text-left">
+		
+			<!-- <h1 class="text-left">
 					<span class="hello">Resum&eacute;<br/></span>
-					<!---->
+					
 
 					<div class="body-copy">
-					You can view my resum&eacute; <a href=./CaitlynHornResume.pdf>here</a>. 
+					You can view my resum&eacute; <a target="_blank" href=CaitlynHornResume.pdf>here</a>. 
 					</div>
 			</h1>
 			   <h1 class="text-left">
 					<span class="hello">Let's keep in touch<br/></span>
-					<!---->
+					
 
 					<div class="body-copy">
-					Send me an email at <a href = "mailto:horn.316@osu.edu">horn.316@osu.edu</a> .<br/>
+					Send me an email at <a target="_blank" href = "mailto:horn.316@osu.edu">horn.316@osu.edu</a> .<br/>
+				
+					</div>
+
+				</h1> -->
+
 					<!--<a href = "https://www.linkedin.com/in/caitlynhorn/" ><img class = "social-icon" src = "linkedin.png"/></a>
 					<a href = "" ><img class = "social-icon" src = "instagram.png"/></a>
 					<a href = "" ><img class = "social-icon" src = "github.png"/></a>-->
-					</div>
-
-				</h1>
 		    </div>
 
 		    <div class="col-md-1"></div>
 	    </div>
     </div>
+
+</body>
+</html>
    <!-- <div id="footer">
 		Made with <span class="glyphicon glyphicon-heart"> </span> in Columbus, Ohio
 	</div>->
