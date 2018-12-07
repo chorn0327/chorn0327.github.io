@@ -1,0 +1,308 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Columbus for the Weekend</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,500|Megrim" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  </head>
+
+  <body id = "bootstrap-override">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-pink static-top">
+      <div class="container">
+        <a class="navbar-brand " href="index.html">Columbus for the Weekend</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue static-top">
+      <div class="container">
+        <ul class="nav navbar-nav nav-fill w-100">
+              <li class="nav-item sub"><a href="bff.html">bff</a></li>
+              <li class="nav-item sub"><a href="so.html">significant other</a></li>
+              <li class="nav-item sub"><a href="parent.html">parental unit</a></li>
+              <li class="nav-item sub"><a href="stay.html">staycation</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-8"><h1 class = "m-20">Significant Other</h1></div>
+        <div class = "col-lg-4"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+          <div id="map"></div>
+              </div>
+          <div class = "col-lg-4 frost-box" id = "map-text" >
+              <script>
+                var markers = [];
+                var locations = [
+                ["<a href = \"https://www.schottensteincenter.com/\" target = \"_\" \">The Schottenstein Center</a>", 40.008630, -83.025085],
+                ["<a href = \"https://hotchickentakeover.com/find-us/columbus/clintonville/\" target = \"_\" \">Hot Chicken Takeover</a>", 40.051441, -83.020268],
+                ["<a href = \"http://kafekerouac.com\" target = \"_\" \">Kafe Kerouac</a>", 40.008406, -83.009512],
+                ["<a href = \"http://cartoons.osu.edu\" target = \"_\" \">Billy Ireland Cartoon Library & Museum</a>", 39.999639, -83.008750],
+                ["<a href = \"http://sushitimecolumbus.com\" target = \"_\" \">Sushi Time</a>", 40.016578, -83.012037],
+                ["<a href = \"http://shortnorth.org/\" target = \"_\" \">Short North Gallery Hop</a>", 39.979937, -83.004050],
+                ["<a href = \"http://oddfellowsliquorbar.com\" target = \"_\" \">Oddfellows Liquor Bar</a>", 39.983744, -83.004601],
+                ["<a href = \"https://www.foxinthesnow.com/\" target = \"_\" \">Fox in the Snow</a>", 39.984267, -82.999415]
+              ];
+
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: {lat: 40.015449, lng: -83.021530}
+               
+              });
+
+              setMarkers(map);
+            }
+
+              function hideAllInfoWindows(map) {
+                 markers.forEach(function(marker) {
+                   marker.infowindow.close(map, marker);
+                }); 
+              }
+
+              function setMarkers(map) {
+                for (var i = 0; i < locations.length; i++) {
+
+                  var location = locations[i];
+                  var locationInfowindow = new google.maps.InfoWindow({
+                    content: locations[i][0],
+                  });
+
+                  var marker = new google.maps.Marker({
+                    position: {lat: location[1], lng: location[2]},
+                    map: map,
+                    title: location[0],
+                    infowindow: locationInfowindow
+                  });
+
+                  markers.push(marker);
+
+                  google.maps.event.addListener(marker, 'click', function() {
+                    hideAllInfoWindows(map);
+                    this.infowindow.open(map, this);
+                  });
+
+                }
+              }
+              
+              var frost = document.getElementById("map-text");
+              for (var i = 0; i < locations.length; i++) {
+                frost.innerHTML += "<h4>" + locations[i][0] + "</h4>";
+              }
+              </script>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Friday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "schott.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">A great way to start off your weekend is with some live music. Columbus has no shortage of venues to check out a show. The Schottenstein Center - where OSU Basketball plays - often showcases touring artists and you can grab a ticket at Dtix at a discount too. </p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">At this point, you'll probably be hungry for some good eats. Swinging by Hot Chicken Takeover in Clintonville is a popular choice. You get to pick the spice level for the chicken and the mac and cheese is insane.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "hct.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Saturday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "kafe.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Kafe Kerouac is a great lowkey choice to grab a cup of coffee right by campus. They have board games you can borrow to play and a library's worth of books to peruse. The vibe is casual so it's a nice place to swing by, especially if you have a little bit of homework to do before spending the rest of the weekend sight seeing. </p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Believe it or not, but Ohio State has several collections housed on campus that many students aren't aware of. One of the best is the Billy Ireland Cartoon Museum, which archives over 300,000 original comics.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "charlie.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "sushi.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Sushi Time has a great all you can eat lunch special for those who like sushi. They also offer tempura and soup to round out the meal. Be careful not to have eyes bigger than your stomach as to not waste food. </p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Every first Saturday evening, The Short North galleries open their doors for a gallery hop. This is a great chance to see some of the amazing art being created here in Columbus. It's fun to walk around and discuss your favorite art pieces, maybe grabbing a drink or two along the way.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "shortnorth.jpg" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "oddfellows.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">If you're already in the Short North, one of the most interesting places to grab a drink is Oddfellows Liquor Bar. With a rotating selection of cocktails (including slushies) you will absolutely find something new to try. </p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Sunday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+            <img src = "fox.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Mornings are for coffee and contemplation. Therefore, you'd better get yourself to Fox in the Snow for plenty of both as they don't offer wifi. They do offer the best breakfast sandwich in Columbus though so it's a good trade off.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Even walking around the neighborhood you live in is fun when you're in good company. Show off where you come from, you should be proud of it! And you never know what you might find.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "fall.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+        
+    </div>
+
+
+
+
+  <div id="footer">
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-lg-6"><a href = "rec.html">Archive</a></div>
+        <div class = "col-lg-6"><a href = "shared.html">Shared By You</a></div>
+      </div>
+    </div>
+    Made with ♡ in Columbus, Ohio
+
+  </div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt0jUinymhlI3uq5XdLwd0qEXIdBW3Jxg&callback=initMap"
+  type="text/javascript"></script>
+
+
+    <!-- load javascript files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>
+
+  <!-- <script type="text/javascript" src="rec.js"></script> -->
+
+
+<script src="sug.js"></script>
+
+
+
+  </body>
+  </html>
+

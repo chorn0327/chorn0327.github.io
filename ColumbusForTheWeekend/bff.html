@@ -1,0 +1,312 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Columbus for the Weekend</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,500|Megrim" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  </head>
+
+  <body id = "bootstrap-override">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-pink static-top">
+      <div class="container">
+        <a class="navbar-brand " href="index.html">Columbus for the Weekend</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue static-top">
+      <div class="container">
+        <ul class="nav navbar-nav nav-fill w-100">
+              <li class="nav-item sub"><a href="bff.html">bff</a></li>
+              <li class="nav-item sub"><a href="so.html">significant other</a></li>
+              <li class="nav-item sub"><a href="parent.html">parental unit</a></li>
+              <li class="nav-item sub"><a href="stay.html">staycation</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-8"><h1 class = "m-20">Best Friend</h1></div>
+        <div class = "col-lg-4"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+          <div id="map"></div>
+         
+
+        </div>
+         <div class = "col-lg-4 frost-box" id = "map-text" >
+              <script>
+                var markers = [];
+                var locations = [
+                ["<a href = \"https://www.foxinthesnow.com/\" target = \"_\" \">Fox in the Snow</a>", 39.984267, -82.999415],
+                ["<a href = \"https://twitter.com/OutRInn?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor\" target = \"_\" \">Out-R-Inn</a>", 40.005220, -83.008475],
+                ["<a href = \"http://www.clintonvillefarmersmarket.org/\" target = \"_\" \">Clintonville Farmers Market</a>", 40.034871, -83.016951],
+                ["<a href = \"https://www.ragorama.com/\" target = \"_\" \">Rag-O-Rama</a>", 40.029705, -83.015632],
+                ["<a href = \"https://www.lacquergallery.com//\" target = \"_\" \">Laquer Gallery</a>", 39.984083, -83.017086],
+                ["<a href = \"https://www.sweetcarrot.com/\" target = \"_\" \">Sweet Carrot</a>", 39.988694, -83.044186],
+                ["<a href = \"http://www.columbusnightlife.com/unioncafe2010/index.php\" target = \"_\" \">Union Cafe</a>", 39.978612, -83.003562]
+              ];
+
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: {lat: 40.006575, lng:-83.017347}
+              });
+
+              setMarkers(map);
+            }
+
+              function hideAllInfoWindows(map) {
+                 markers.forEach(function(marker) {
+                   marker.infowindow.close(map, marker);
+                }); 
+              }
+
+              function setMarkers(map) {
+                for (var i = 0; i < locations.length; i++) {
+
+                  var location = locations[i];
+                  var locationInfowindow = new google.maps.InfoWindow({
+                    content: locations[i][0],
+                  });
+
+                  var marker = new google.maps.Marker({
+                    position: {lat: location[1], lng: location[2]},
+                    map: map,
+                    title: location[0],
+                    infowindow: locationInfowindow
+                  });
+
+                  markers.push(marker);
+
+                  google.maps.event.addListener(marker, 'click', function() {
+                    hideAllInfoWindows(map);
+                    this.infowindow.open(map, this);
+                  });
+
+                }
+              }
+              
+              var frost = document.getElementById("map-text");
+              for (var i = 0; i < locations.length; i++) {
+                frost.innerHTML += "<h4>" + locations[i][0] + "</h4>";
+              }
+              </script>
+        </div>
+        
+        <div class = "col-lg-2"></div>
+      </div>
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Friday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "outrinn.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Every proper Friday evening with a best friend starts at your favorite watering hole. I would recommend Out-R-Inn for the real dive bar experience, complete with pool tables and neon.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Don't forget to grab a piece of pizza from Cicilia's next door.</p>
+        </div>
+      </div>
+        <div class = "col-lg-4 ">
+            <img src = "outrinn2.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Saturday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+            <img src = "fox.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Mornings are for coffee and contemplation. Therefore, you'd better get yourself to Fox in the Snow for plenty of both as they don't offer wifi. They do offer the best breakfast sandwich in Columbus though so it's a good trade off.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">When the weather's nice, find yourself a farmers market to wander around. Support your local community!</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "farmers.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+        <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+            <img src = "laquer.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">If manicures are up your alley, there's not better place in town than Laquer Gallery. </p>
+        </div>
+      </div>
+        <div class = "col-lg-2"></div>
+        </div>
+
+        <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Stop by Sweet Carrot for a late lunch. I'd recommend the mac and cheese with deep fried artichoke hearts - yum.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "sweetcarrot.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+        <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "rag.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <!-- <p class = "lead">Window shopping in the Short North is always a guaranteed good time - especially on the first Saturday of every month when the Gallery Hop is on. Artists in the Short North open their studio doors and showcase their work. It's the perfect start to a fun night.</p> -->
+          <div class = "frost">
+          <p class = "lead">The Old North has several thrift stores to shop at, you're certain to find a funky new addition to your wardrobe while wandering around.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+        </div>
+
+
+        <div class = "row">
+          <div class = "col-lg-2"></div>
+          <div class = "col-lg-4"><p class = "day m-20">Sunday</p></div>
+          <div class = "col-lg-4"></div>
+          <div class = "col-lg-2"></div>
+        </div>
+
+
+
+          <div class = "row">
+          <div class = "col-lg-2"></div>
+          
+          <div class = "col-lg-4">
+            <div class = "frost">
+            <p class = "lead">Union Cafe in the Short North often has Drag Brunch - a brunch buffet featuring a rotating cast of Drag Queens who will perform during your meal. Make sure to bring singles to tip the lovely ladies.</p>
+          </div>
+          </div>
+          <div class = "col-lg-4">
+              <img src = "dragbrunch.JPG" class = "recimg">
+          </div>
+          <div class = "col-lg-2"></div>
+
+          </div>
+
+          <div class = "row">
+          <div class = "col-lg-2"></div>
+          <div class = "col-lg-4">
+              <img src = "thompson.JPG" class = "recimg">
+          </div>
+          <div class = "col-lg-4">
+            <div class = "frost">
+            <p class = "lead">A good way to end a lovely visit with a friend is to take them for a walk around campus and show them your favorite haunts. I recommend the KSA and Thompson - they're crowd pleasers. Show off where you come from, you should be proud of it! And you never know what you might find.</p>
+          </div>
+          </div>
+          <div class = "col-lg-2"></div>
+          </div>
+
+
+        
+    </div>
+
+
+
+
+  <div id="footer">
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-lg-6"><a href = "rec.html">Archive</a></div>
+        <div class = "col-lg-6"><a href = "shared.html">Shared By You</a></div>
+      </div>
+    </div>
+    Made with ♡ in Columbus, Ohio
+
+  </div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt0jUinymhlI3uq5XdLwd0qEXIdBW3Jxg&callback=initMap"
+  type="text/javascript"></script>
+
+
+    <!-- load javascript files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>
+
+  <!-- <script type="text/javascript" src="rec.js"></script> -->
+
+
+<script src="sug.js"></script>
+
+
+
+  </body>
+  </html>
+

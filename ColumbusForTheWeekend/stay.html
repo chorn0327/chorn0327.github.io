@@ -1,0 +1,313 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Columbus for the Weekend</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,500|Megrim" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  </head>
+
+  <body id = "bootstrap-override">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-pink static-top">
+      <div class="container">
+        <a class="navbar-brand " href="index.html">Columbus for the Weekend</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue static-top">
+      <div class="container">
+        <ul class="nav navbar-nav nav-fill w-100">
+              <li class="nav-item sub"><a href="bff.html">bff</a></li>
+              <li class="nav-item sub"><a href="so.html">significant other</a></li>
+              <li class="nav-item sub"><a href="parent.html">parental unit</a></li>
+              <li class="nav-item sub"><a href="stay.html">staycation</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-8"><h1 class = "m-20">Staycation</h1></div>
+        <div class = "col-lg-4"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+          <div id="map"></div>
+         
+
+        </div>
+         <div class = "col-lg-4 frost-box" id = "map-text" >
+              <script>
+                var markers = [];
+                var locations = [
+                ["<a href = \"http://www.pistaciavera.com/gv-menu/\" target = \"_\" \">Pistacia Vera</a>", 39.951489, -82.996112],
+                ["<a href = \"https://twitter.com/OutRInn?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor\" target = \"_\" \">Cicilia's Pizza</a>", 40.005220, -83.008475],
+                ["<a href = \"http://www.bookloft.com/\" target = \"_\" \">The Book Loft German Village</a>", 39.949799, -82.995745],
+                ["<a href = \"https://hotchickentakeover.com/find-us/columbus/clintonville/\" target = \"_\" \">Hot Chicken Takeover</a>", 40.051441, -83.020268],
+                ["<a href = \"https://www.ragorama.com/\" target = \"_\" \">Rag-O-Rama</a>", 40.029705, -83.015632],
+                ["<a href = \"https://www.foxinthesnow.com/\" target = \"_\" \">Fox in the Snow</a>", 39.984267, -82.999415],
+                ["<a href = \"https://shoptigertree.com/\" target = \"_\" \">Tigertree</a>", 39.978612, -83.003562]
+              ];
+
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: {lat: 40.006575, lng:-83.017347}
+              });
+
+              setMarkers(map);
+            }
+
+              function hideAllInfoWindows(map) {
+                 markers.forEach(function(marker) {
+                   marker.infowindow.close(map, marker);
+                }); 
+              }
+
+              function setMarkers(map) {
+                for (var i = 0; i < locations.length; i++) {
+
+                  var location = locations[i];
+                  var locationInfowindow = new google.maps.InfoWindow({
+                    content: locations[i][0],
+                  });
+
+                  var marker = new google.maps.Marker({
+                    position: {lat: location[1], lng: location[2]},
+                    map: map,
+                    title: location[0],
+                    infowindow: locationInfowindow
+                  });
+
+                  markers.push(marker);
+
+                  google.maps.event.addListener(marker, 'click', function() {
+                    hideAllInfoWindows(map);
+                    this.infowindow.open(map, this);
+                  });
+
+                }
+              }
+              
+              var frost = document.getElementById("map-text");
+              for (var i = 0; i < locations.length; i++) {
+                frost.innerHTML += "<h4>" + locations[i][0] + "</h4>";
+              }
+              </script>
+        </div>
+        
+        <div class = "col-lg-2"></div>
+      </div>
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Friday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "stadium.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Sometimes the stresses of school work are too much. Sometimes you're in Columbus alone for a weekend and you aren't sure what to do. In these times, you need a staycation. </p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">When I'm keeping it lowkey, pizza is usually the go to. Cicilia's (conveniently located inside of Out-R-Inn) is a great spot to grab a quick slice that'll really hit the spot.</p>
+        </div>
+      </div>
+        <div class = "col-lg-4 ">
+            <img src = "outrinn2.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Saturday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+            <img src = "pistacia.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Pistacia Vera is a boutique coffee and pastry spot in the German Village. If you happen to visit by yourself, there's no one to judge you if you indulge in a sweet (or three, they have an amazing selection!)</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">While in the German Village, stop by the Book Loft. This is a bibliophile's paradine, offering 32 ROOMS of books on display. If you can't find anything to read here, consider podcasts.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "books.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+        <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+            <img src = "hct.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">While you're treating yourself, swing by Hot Chicken Takeover in Clintonville. You get to pick the spice level for the chicken and the mac and cheese is insane.</p>
+        </div>
+      </div>
+        <div class = "col-lg-2"></div>
+        </div>
+
+        <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">The Old North has several thrift stores to shop at, you're certain to find a funky new addition to your wardrobe while wandering around.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "rag.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      
+
+
+        <div class = "row">
+          <div class = "col-lg-2"></div>
+          <div class = "col-lg-4"><p class = "day m-20">Sunday</p></div>
+          <div class = "col-lg-4"></div>
+          <div class = "col-lg-2"></div>
+        </div>
+
+
+
+          <div class = "row">
+            <div class = "col-lg-2"></div>
+            <div class = "col-lg-4">
+                <img src = "fox.JPG" class = "recimg">
+            </div>
+            <div class = "col-lg-4">
+              <div class = "frost">
+              <p class = "lead">Mornings are for coffee and contemplation. Therefore, you'd better get yourself to Fox in the Snow for plenty of both as they don't offer wifi. They do offer the best breakfast sandwich in Columbus though so it's a good trade off.</p>
+            </div>
+            </div>
+            <div class = "col-lg-2"></div>
+          </div>
+
+          <div class = "row">
+          <div class = "col-lg-2"></div>
+          <div class = "col-lg-4">
+            <div class = "frost">
+            <p class = "lead">If you're in the mood to windowshop, the Short North has a variety of fun shops to look through. One of my personal favorites is Tigertree, which is always eclectic and usually fairly on trend as well. </p>
+          </div>
+        </div>
+          <div class = "col-lg-4">
+              <img src = "tigertree.JPG" class = "recimg">
+          </div>
+          <div class = "col-lg-2"></div>
+          </div>
+
+          <div class = "row">
+            <div class = "col-lg-2"></div>
+            <div class = "col-lg-4">
+                <img src = "houses.JPG" class = "recimg">
+            </div>
+            <div class = "col-lg-4">
+              <div class = "frost">
+              <p class = "lead">On a beautiful day, a walk through an old Columbus neighborhood is always the move. Columbus has a great deal of curb appeal to explore, you never know what you might find.</p>
+            </div>
+            </div>
+            <div class = "col-lg-2"></div>
+          </div>
+
+
+        
+    </div>
+
+
+
+
+  <div id="footer">
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-lg-6"><a href = "rec.html">Archive</a></div>
+        <div class = "col-lg-6"><a href = "shared.html">Shared By You</a></div>
+      </div>
+    </div>
+    Made with ♡ in Columbus, Ohio
+
+  </div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt0jUinymhlI3uq5XdLwd0qEXIdBW3Jxg&callback=initMap"
+  type="text/javascript"></script>
+
+
+    <!-- load javascript files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>
+
+  <!-- <script type="text/javascript" src="rec.js"></script> -->
+
+
+<script src="sug.js"></script>
+
+
+
+  </body>
+  </html>
+

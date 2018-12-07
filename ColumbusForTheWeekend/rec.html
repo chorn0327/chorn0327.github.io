@@ -1,0 +1,127 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Columbus for the Weekend</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,500|Megrim" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  </head>
+
+  <body id = "bootstrap-override">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-pink static-top">
+      <div class="container">
+        <a class="navbar-brand " href="index.html">Columbus for the Weekend</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue static-top">
+      <div class="container">
+        <ul class="nav navbar-nav nav-fill w-100">
+              <li class="nav-item sub"><a href="bff.html">bff</a></li>
+              <li class="nav-item sub"><a href="so.html">significant other</a></li>
+              <li class="nav-item sub"><a href="parent.html">parental unit</a></li>
+              <li class="nav-item sub"><a href="stay.html">staycation</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+
+<div class = "container">
+	<center><h1 class = "m-20">Recommendations</h1></center>
+	<div class = "row">
+	        <div class = "col-lg-2"></div>
+	        <div class = "col-lg-8">
+	        	<div id="recs1" class="large-4 columns">
+	        	  <script id="recs1-template" type="text/x-handlebars-template">
+	        	    <h2 class='group' style='display:{{displayIfFirstOccurrence cells.Group}}'>{{cells.Group}}</h2>
+
+	        	    <h3 class = "rec"><a href = "{{cells.URL}}" target = "_" >{{cells.Recommendation}}</a></h3>
+	        	     
+	        	     <p class = "rec">{{cells.Description}}</p>
+	        	  </script>
+	        	</div>
+	        </div>
+	        <div class = "col-lg-2"></div>
+	</div>
+
+	<div class = "row">
+	        <div class = "col-lg-2"></div>
+	        <div class = "col-lg-8">
+				<div id="recs2" class="large-4 columns">
+	        	  <script id="recs2-template" type="text/x-handlebars-template">
+	        	    <h2 class='group' style='display:{{displayIfFirstOccurrence cells.Group}}'>{{cells.Group}}</h2>
+
+	        	    <h3 class = "rec"><a href = "{{cells.URL}}" target = "_" >{{cells.Recommendation}}</a></h3>
+	        	     
+	        	     <p class = "rec">{{cells.Description}}</p>
+	        	  </script>
+	        	</div>
+
+</div>
+</div>
+</div>
+  <!-- <div id="recs1" class="large-4 columns">
+    <script id="recs1-template" type="text/x-handlebars-template">
+      <dl>
+        <dt><h3 class='group' style='display:{{displayIfFirstOccurrence cells.Group}}'>{{cells.Group}}</h3>{{cells.Reccomendation}}</dt>
+        <dd>{{cells.URL}}</dd>
+      </dl>
+    </script>
+  </div> -->
+<!-- Load Handlebars.js from CloudFlare’s CDN. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+  <!-- load javascript files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>
+
+  <!-- <script type="text/javascript" src="rec.js"></script> -->
+
+
+<script src="rec.js"></script>
+
+
+
+
+  <div id="footer">
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-lg-6"><a href = "rec.html">Archive</a></div>
+        <div class = "col-lg-6"><a href = "shared.html">Shared By You</a></div>
+      </div>
+    </div>
+    Made with ♡ in Columbus, Ohio
+
+  </div>
+
+
+
+
+  </body>
+  </html>
+
+

@@ -1,0 +1,307 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Columbus for the Weekend</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,400,500|Megrim" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+  </head>
+
+  <body id = "bootstrap-override">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-pink static-top">
+      <div class="container">
+        <a class="navbar-brand " href="index.html">Columbus for the Weekend</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue static-top">
+      <div class="container">
+        <ul class="nav navbar-nav nav-fill w-100">
+              <li class="nav-item sub"><a href="bff.html">bff</a></li>
+              <li class="nav-item sub"><a href="so.html">significant other</a></li>
+              <li class="nav-item sub"><a href="parent.html">parental unit</a></li>
+              <li class="nav-item sub"><a href="stay.html">staycation</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-8"><h1 class = "m-20">Parental/Guardian</h1></div>
+        <div class = "col-lg-4"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4">
+          <div id="map"></div>
+        </div>
+
+        <div class = "col-lg-4 frost-box" id = "map-text" >
+              <script>
+                var markers = [];
+                var locations = [
+                ["<a href = \"http://grandviewtheater.com\" target = \"_\" \">Grandview Theater and Drafthouse</a>", 39.983458, -83.045335],
+                ["<a href = \"http://onelinecoffee.com\" target = \"_\" \">One Line Coffee-Short North</a>", 39.977849, -83.003815],
+                ["<a href = \"http://shortnorth.org/\" target = \"_\" \">Short North Gallery Hop</a>", 39.979937, -83.004050],
+                ["<a href = \"http://brassicas.com\" target = \"_\" \">Brassica</a>", 39.976534, -83.003145],
+                ["<a href = \"http://jenis.com/\" target = \"_\" \">Jeni's Splendid Ice Creams</a>", 39.964868, -82.999869],
+                ["<a href = \"http://capcityfinediner.com\" target = \"_\" \">Cap City Fine Diner and Bar</a>", 39.986747, -83.025008],
+                ["<a href = \"http://columbusmuseum.org\" target = \"_\" \">Columbus Museum of Art</a>", 39.964631, -82.987727]
+              ];
+
+            function initMap() {
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: {lat: 39.971109, lng:-83.004031}
+               
+              });
+
+              setMarkers(map);
+            }
+
+              function hideAllInfoWindows(map) {
+                 markers.forEach(function(marker) {
+                   marker.infowindow.close(map, marker);
+                }); 
+              }
+
+              function setMarkers(map) {
+                for (var i = 0; i < locations.length; i++) {
+
+                  var location = locations[i];
+                  var locationInfowindow = new google.maps.InfoWindow({
+                    content: locations[i][0],
+                  });
+
+                  var marker = new google.maps.Marker({
+                    position: {lat: location[1], lng: location[2]},
+                    map: map,
+                    title: location[0],
+                    infowindow: locationInfowindow
+                  });
+
+                  markers.push(marker);
+
+                  google.maps.event.addListener(marker, 'click', function() {
+                    hideAllInfoWindows(map);
+                    this.infowindow.open(map, this);
+                  });
+
+                }
+              }
+              
+              var frost = document.getElementById("map-text");
+              for (var i = 0; i < locations.length; i++) {
+                frost.innerHTML += "<h4>" + locations[i][0] + "</h4>";
+              }
+              </script>
+        
+        <div class = "col-lg-2"></div>
+      </div>
+    </div>
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Friday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "pepper.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">If you really want to impress your visiting parents, make them dinner. I know, this isn't technically a recommendation of where to go visit in Columbus but it's good advice. They'll be so proud that they raised a competent human being, it's a good way to start the weekend on a great note.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">After dinner, catching a movie is usually a popular choice. Columbus has several smaller theaters that have great charm, and are often playing the recent releases as well as throw back offerings. Grand View Theater and Drafthouse is a great choice that isn't too far from campus.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "grandview.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Saturday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "oneline.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">One Line Coffee in the short north offers a variety of coffee options that are sure to please everyone in your family. Set in a nice establishment with ample parking, it's a great place to grab a cup and relax.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Once you have your coffee fix, you're ready to go and get to shopping in the Short North. Especially around the holidays, the Short North is a unique place for your family to browse and find something neat for presents.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "grandview.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "brassica.png" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Brassica has a variety of fresh and flavorful options for your family to pick from in a quickserve format. The falafel is incredible and the french fries are pretty darn good as well.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Take your parents on a walking tour, especially showing them your classroom building and the library. Especially if your parents happen to be alumni of Ohio State, they'll love visiting your favorite haunts and it's a nice time to tell them about your current interests and talk about your classes. </p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "thompsoninside.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "capcity.jpg" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">Cap City Diner is a neat restaurant to have dinner at with your parents. It's styled after an old fashioned diner, full of nostalgic artifacts, and serves a pretty decent milkshake as well. </p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4"><p class = "day m-20">Sunday</p></div>
+        <div class = "col-lg-4"></div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        <div class = "col-lg-4 ">
+            <img src = "jeni.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">The best way to top off a weekend with your family is with a nice scoop of Jeni's. With their eclectic flavors, you will certainly please everyone.</p>
+        </div>
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-lg-2"></div>
+        
+        <div class = "col-lg-4">
+          <div class = "frost">
+          <p class = "lead">The Columbus Museum of Art offers free admission on Sundays, make sure to stop by and see the Lego sculpture of Columbus on the first floor. There is a wide range of art here from pre-historic all the way to modern, a must see.</p>
+        </div>
+        </div>
+        <div class = "col-lg-4">
+            <img src = "cmoa.JPG" class = "recimg">
+        </div>
+        <div class = "col-lg-2"></div>
+      </div>
+
+
+
+        
+    </div>
+
+
+
+
+  <div id="footer">
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-lg-6"><a href = "rec.html">Archive</a></div>
+        <div class = "col-lg-6"><a href = "shared.html">Shared By You</a></div>
+      </div>
+    </div>
+    Made with ♡ in Columbus, Ohio
+
+  </div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCt0jUinymhlI3uq5XdLwd0qEXIdBW3Jxg&callback=initMap"
+  type="text/javascript"></script>
+
+
+    <!-- load javascript files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://chriszarate.github.io/sheetrock/dist/sheetrock.min.js"></script>
+
+  <!-- <script type="text/javascript" src="rec.js"></script> -->
+
+
+<script src="sug.js"></script>
+
+
+
+  </body>
+  </html>
+
