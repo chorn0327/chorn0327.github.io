@@ -94,7 +94,7 @@ img {
 }
 .name{
 	font-size: 35pt;
-	font-family: 'Petit Formal Script', cursive;
+	font-family: 'Playfair Display', cursive;
 	color: #13293D;
 	background-color: #F4FCFF;
 	text-align: center;
@@ -162,6 +162,7 @@ img {
 
 a{
 	color:#CC2255;
+  font-family: 'Playfair Display', cursive;
 }
 a:hover, a:focus, a:active{
     color:#E79AB1;
