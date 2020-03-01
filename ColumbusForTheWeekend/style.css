@@ -139,7 +139,10 @@ html {
 h1{
 	font-family: 'Megrim', Serif;
 	font-size: 3rem;
-	text-shadow: 0 0 3px #00A6FB, 0 0 5px #00A6FB;
+}
+
+h2{
+	font-weight:300;
 }
 
 #main-nav {

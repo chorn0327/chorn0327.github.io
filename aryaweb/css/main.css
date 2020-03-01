@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+    background-color: #EDEEEC;
+    margin: 0px;
+}
+.container{
+    max-width:100%;
+}
+
+.arya { 
+    /* The image used */
+    background-image: url("arya.jpg");
+
+    /* Full height */
+    height: 100%; 
+    position:relative;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+	text-align: center;
+}
+
+.arya-text{
+	position: absolute;
+    bottom: 1em;
+    font-family: Crimson Text, Times New Roman, serif;
+    color: #FAF7F6;
+    text-align: center;
+    width: 100%;
+    font-size: 80px;
+
+}
+#arya-sub{
+	font-size:40px;
+    font-family: Assistant, sans-serif;
+}
+
+.house img{
+    width:100%;
+}
+.name{
+    font-family: Crimson Text, Times New Roman, serif;
+}
+
+.quote{
+	/*height: 14em;*/
+    /*height:100%;*/
+    font-family: Assistant, sans-serif;
+	/*background-color: #FAF7F6;*/
+    text-align: center;
+    /*position: relative;*/
+    vertical-align: middle;
+    font-size: 25px;
+    
+    padding-right: 50px;
+    padding-left: 50px;
+    /*mix-blend-mode: screen;*/
+}
+
+.padding-30{
+    padding-top: 29%;
+}
+
+.padding-20{
+    padding-top: 18%;
+}
+#center{
+    display: flex;
+    /* flex-direction: column;*/
+    align-items: center; 
+}
+
+
+
+.row-no-padding > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
