@@ -62,7 +62,7 @@ img {
 
 
 .outline-text {
-  background-color: white;
+  background-color: #c9e0ff;
   color: black;
   font-size: 2em; /* Responsive font size */
   font-weight: bold;
@@ -186,7 +186,6 @@ a:hover, a:focus, a:active{
     border-radius:0;
     font-family:'Lato', sans-serif;
 	font-weight:400;
-	opacity: 50%;
 	background-color: #F4FCFF;
 
 }
